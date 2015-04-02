@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DepartmentPage"
+            android:label="@string/title_activity_department_page" >
+        </activity>
     </application>
 
 </manifest>
