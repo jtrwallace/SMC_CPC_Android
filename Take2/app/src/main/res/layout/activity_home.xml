@@ -43,7 +43,7 @@
         android:layout_alignParentStart="true"
         style="@style/Base.TextAppearance.AppCompat.Menu"
         android:clickable="true"
-        android:onClick="@string/title_activity_department_page" />
+        android:onClick="buttonDepartment"/>
 
     <Button
         android:layout_width="wrap_content"

@@ -1,9 +1,11 @@
 package com.example.nighthawk.take2;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class Home extends ActionBarActivity {
@@ -14,8 +16,29 @@ public class Home extends ActionBarActivity {
         setContentView(R.layout.activity_home);
     }
 
+    //Buttons to change activites
 
-    @Override
+    public void buttonDepartment(View view) {
+        Intent intent = new Intent(this, DepartmentPage.class);
+        startActivity(intent);
+    }
+    /*
+    public void buttonSubject(View view) {
+        Intent intent = new Intent(this, Subject.class);
+        startActivity(intent);
+    }
+    public void buttonCourse(View view) {
+        Intent intent = new Intent(this, Course.class);
+        startActivity(intent);
+            }
+    public void buttonInstructor(View view) {
+        //Button button4 = (Button) findViewById(R.id.button4);
+        Intent intent = new Intent(this, Instructor.class);
+        startActivity(intent);
+    }
+    */
+
+        @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
