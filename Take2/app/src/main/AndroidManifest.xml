@@ -20,6 +20,14 @@
             android:name=".DepartmentPage"
             android:label="@string/title_activity_department_page" >
         </activity>
+        <activity
+            android:name=".Instructor"
+            android:label="@string/title_activity_instructor"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nighthawk.take2.Home" />
+        </activity>
     </application>
 
 </manifest>
