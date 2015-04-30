@@ -23,11 +23,12 @@ public class Home extends ActionBarActivity {
         Intent intent = new Intent(this, DepartmentPage.class);
         startActivity(intent);
     }
-    /*
-    public void buttonSubject(View view) {
-        Intent intent = new Intent(this, Subject.class);
+
+    public void buttonInstructor(View view) {
+        Intent intent = new Intent(this, Instructor.class);
         startActivity(intent);
     }
+    /*
     public void buttonCourse(View view) {
         Intent intent = new Intent(this, Course.class);
         startActivity(intent);
