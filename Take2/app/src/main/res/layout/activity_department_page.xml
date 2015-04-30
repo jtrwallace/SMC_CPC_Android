@@ -1,12 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.nighthawk.take2.DepartmentPage"
     android:background="#ff1ab9ff"
-    android:nestedScrollingEnabled="true">
+    android:nestedScrollingEnabled="true"
+    android:clickable="true">
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,24 +26,17 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/textView2"
-        android:background="#46908f91" />
-
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="243dp" />
+        android:background="#ffffffff" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Art/AHIS"
         android:id="@+id/button5"
-        android:layout_below="@+id/scrollView"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -65,27 +59,35 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button8"
-        android:layout_below="@+id/button7"
+        android:text="Business"
+        android:id="@+id/button9"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/button7" />
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/button7" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button9"
-        android:layout_below="@+id/button8"
+        android:text="Communication"
+        android:id="@+id/button10"
+        android:layout_below="@+id/button9"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/button8" />
+        android:layout_alignEnd="@+id/button9" />
 
-    <Spinner
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_below="@+id/textView2"
-        android:layout_alignEnd="@+id/button5"
-        android:spinnerMode="dropdown" />
+        android:text="Cosmetology"
+        android:id="@+id/button8"
+        android:layout_below="@+id/button10"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/button10" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView4"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>

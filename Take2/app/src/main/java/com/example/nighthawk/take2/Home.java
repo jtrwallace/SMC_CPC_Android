@@ -7,6 +7,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.content.Intent;
+import android.view.View;
+
 
 public class Home extends ActionBarActivity {
     DatabaseHelper myDb;
@@ -61,4 +64,21 @@ public class Home extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    //for button use to department page
+    public void departmentClick (View view){
+
+
+        Intent intent = new Intent(this,DepartmentPage.class);
+        startActivity(intent);
+    }
+     // for button Subject
+      public void subjectCLick ( View view ){
+
+          Intent intent = new Intent (this,SubjectPage.class );
+          startActivity(intent);
+      }
+
+
 }
+
