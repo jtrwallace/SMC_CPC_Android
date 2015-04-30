@@ -32,7 +32,7 @@ public class Instructor extends ActionBarActivity {
 
                         if (res.getCount() == 0){
                             //insert message later if the database is empty
-                            showMessage("ERROR", "No data found");
+                            showMessage("Empty", "No data found");
                             return;
                         }
                         StringBuffer buffer = new StringBuffer();
