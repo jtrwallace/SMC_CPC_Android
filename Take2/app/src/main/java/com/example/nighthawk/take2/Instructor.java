@@ -8,10 +8,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class Instructor extends ActionBarActivity {
     DatabaseHelper myDb;
+    EditText editInstructor, editSection, editDepartment, editAvg;
+    Button btnAddData;
     Button btnViewAll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +25,39 @@ public class Instructor extends ActionBarActivity {
         myDb = new DatabaseHelper(this);
         btnViewAll = (Button)findViewById(R.id.button_viewAll);
         viewAll();
+
+        editInstructor = (EditText)findViewById(R.id.editText_instructor);
+        editSection = (EditText)findViewById(R.id.editText_section);
+        editDepartment = (EditText)findViewById(R.id.editText2_department);
+        editAvg = (EditText)findViewById(R.id.editText3_avg);
+
+        btnAddData = (Button)findViewById(R.id.button_insert);
+
+        addData();
+
+    }
+
+    public void addData()
+    {
+        btnAddData.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Boolean isInserted = myDb.insertData("None", "None",
+                                Integer.parseInt(editSection.getText().toString()),editInstructor.getText().toString(),
+                                1,0,0,0,0,0,
+                                Integer.parseInt(editAvg.getText().toString()));
+                        if (isInserted == true)
+                        {
+                            Toast.makeText(Instructor.this,"Data Added",Toast.LENGTH_LONG).show();
+                        }
+                        else
+                        {
+                            Toast.makeText(Instructor.this,"Data Add Not Successful",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }
+        );
     }
 
     public void viewAll(){
